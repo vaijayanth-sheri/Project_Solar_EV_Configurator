@@ -13,7 +13,7 @@ A web-based tool built with Python and Streamlit to help homeowners and consulta
 
 ### Demo
 
-Live Demo Link:
+Live Demo Link:    https://projectsolarevconfigurator.streamlit.app/ 
 
 ---
 ### 💡 Key Features
