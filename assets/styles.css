@@ -1,0 +1,63 @@
+/* --- Base Styles & Theme Colors --- */
+:root {
+    --primary-color: #2E7D32; /* Soft Green */
+    --secondary-color: #66BB6A; /* Lighter Green */
+    --accent-color: #1E88E5; /* Blue Accent */
+    --text-color: #37474F;
+    --bg-color: #F9F9F9;
+    --card-bg-color: #FFFFFF;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Override Streamlit Base --- */
+body {
+    color: var(--text-color);
+}
+
+.stApp {
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.stButton>button {
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Custom UI Cards --- */
+.css-1r6slb0, .css-1d391kg { /* Target Streamlit's container for custom styling */
+    border-radius: var(--border-radius);
+}
+
+.metric-card {
+    background-color: var(--card-bg-color);
+    border-left: 5px solid var(--accent-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+
+.metric-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.metric-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
