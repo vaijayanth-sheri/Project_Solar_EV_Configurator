@@ -7,25 +7,40 @@ An interactive web app built with Python and Streamlit to visually plan and anal
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31%2B-red.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A web-based tool built with Python and Streamlit to help homeowners and consultants plan and analyze rooftop solar installations, with integrated support for EV charging and battery storage planning.
+An advanced, web-based tool built with Python and Streamlit to help homeowners and energy consultants plan, analyze, and customize rooftop solar installations. It features integrated support for EV charging, battery storage, and a detailed self-consumption model with market-accurate financial calculations.
 
 ---
 
-### Demo
+### 🚀 Live Demo
 
-Live Demo Link:    https://projectsolarevconfigurator.streamlit.app/ 
+**Experience the tool live:** **[https://projectsolarevconfigurator.streamlit.app/](https://projectsolarevconfigurator.streamlit.app/)**
+
+
+
+![Solar Configurator Demo](placeholder_for_demo.gif)
 
 ---
+
 ### 💡 Key Features
 
-*   **📍 Interactive Location Selection:** Find any address on an interactive satellite map.
+The application provides a seamless workflow from initial location selection to a detailed, exportable report.
+
+#### Core Functionality:
+*   **📍 Interactive Location Selection:** Find any address globally on a high-resolution satellite map.
 *   **✏️ Manual Rooftop Drawing:** Precisely draw one or more usable rooftop areas for accurate area calculation.
-*   **☀️ Automated Solar Data:** Instantly fetches location-specific solar irradiance data from the PVGIS API.
-*   **💡 Optimal System Sizing:** Get immediate estimates for system size (kWp) and panel count based on your drawn area.
-*   **💰 Financial Analysis:** Understand your investment with clear metrics on total cost, annual savings, and payback period.
-*   **🚗⚡ Integrated Add-ons:** Optionally model the impact of adding battery storage or planning for one or more EV chargers.
-*   **📄 PDF Export:** Generate a clean, detailed report of your complete configuration for sharing and planning.
+*   **☀️ Automated Solar Data:** Instantly fetches location-specific solar irradiance data from the PVGIS API with automatic database switching for worldwide coverage.
+*   **📊 Self-Consumption Modeling:** Simulate realistic financial outcomes based on either annual household electricity consumption (kWh) or a direct self-consumption percentage.
+*   **💰 Detailed Financial Analysis:** Understand your investment with metrics on total cost, annual savings from self-use, feed-in tariff revenue, and a dynamic payback period based on market-accurate values.
+*   **🚗⚡ Integrated Add-ons:** Model the impact of adding battery storage or planning for EV chargers, with intelligent system upsizing recommendations.
+*   **📄 Professional PDF Export:** Generate a clean, detailed, and customizable report of your complete configuration, including all expert settings and financial breakdowns.
 *   **🌍 Bilingual Support:** Fully functional in both English and German.
+
+#### 🔧 Expert Settings Panel
+For professionals and advanced users, the "Expert Settings" panel unlocks deep customization of the simulation:
+*   **Rooftop Configuration:** Override default tilt and azimuth/orientation.
+*   **Climate & Performance:** Adjust system losses and annual panel degradation rates.
+*   **Financial Parameters:** Input custom values for system cost per kWp, battery cost per kWh, grid electricity price, and feed-in tariffs to match local market conditions.
+*   **Report Customization:** Choose which optional sections (EV, Battery, Sustainability) to include in the final PDF report.
 
 ### 🛠️ Tech Stack
 
@@ -35,9 +50,9 @@ Live Demo Link:    https://projectsolarevconfigurator.streamlit.app/
 *   **PDF Reporting:** ReportLab
 *   **UI Components:** streamlit-option-menu
 
-### 📁 Project Structure
+### 📁 Updated Project Structure
 
-The project uses a clean, modular architecture to separate concerns:
+The project uses a clean, modular architecture to separate concerns, making it scalable and easy to maintain.
 
 ```
 solar_configurator/
@@ -48,6 +63,7 @@ solar_configurator/
 ├── README.md
 │
 ├── modules/                    # Core logic modules
+│   ├── self_consumption.py     # New
 │   ├── location.py
 │   ├── map_draw.py
 │   ├── irradiance.py
@@ -74,7 +90,7 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://https://github.com/vaijayanth-sheri/Project_Solar_EV_Configurator.git
+    git clone https://github.com/vaijayanth-sheri/Project_Solar_EV_Configurator.git
     cd Project_Solar_EV_Configurator
     ```
 
@@ -99,8 +115,8 @@ To run this project locally, follow these steps:
     streamlit run app.py
     ```
 
-The application should now be open in your web browser!
+The application should now be open and running in your web browser!
 
 ### 🤝 Contributing
 
-Feedback, bug reports, and pull requests are welcome! Feel free to open an issue to discuss a new feature or improvement.
+Feedback, bug reports, and pull requests are welcome! If you have ideas for new features (like advanced battery dispatch modeling or different financial incentives), please feel free to open an issue to start a discussion.
